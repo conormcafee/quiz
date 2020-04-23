@@ -6,7 +6,7 @@ const blur = (props) => {
     return `blur(0px)`;
   } else {
     if (!props.toggleBlur) {
-      return `blur(5px)`;
+      return `blur(3px)`;
     } else {
       return `blur(0px)`;
     }
@@ -46,8 +46,8 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 80px;
+  padding-right: 80px;
   background-image: url(${LivingRoom});
   background-size: cover;
   background-position: center center;
@@ -78,13 +78,13 @@ export const TVBG = styled.div`
 
 export const TVMask = styled.div`
   background: "white";
-  height: 345px;
-  width: 468px;
+  height: 331px;
+  width: 442px;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(49px, 257px);
-  border-radius: 120px;
+  transform: translate(49px, 252px);
+  border-radius: 85px;
   overflow: hidden;
 `;
 
