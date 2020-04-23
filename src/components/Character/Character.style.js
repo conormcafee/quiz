@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LivingRoom from "../../assets/living-room.jpg";
 
 const blur = (props) => {
   if (props.revealAnswer) {
@@ -40,14 +41,30 @@ const flip = (props) => {
   }
 };
 
-export const Wrapper = styled.main`
+export const Wrapper = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 24px;
-  padding-right: 24px;
-  background-color: ${(props) => (props.isOdd ? `#70d1fe` : `#000000`)};
+  padding-left: 48px;
+  padding-right: 48px;
+  background-image: url(${LivingRoom});
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
 `;
 
 export const TVBG = styled.div`
@@ -56,6 +73,7 @@ export const TVBG = styled.div`
   height: 90vh;
   background-size: contain;
   background-repeat: no-repeat;
+  order: ${(props) => !props.isOdd && 2};
 `;
 
 export const TVMask = styled.div`
@@ -90,6 +108,8 @@ export const Content = styled.aside`
   padding: 24px;
   flex: 1;
   min-width: 50%;
+  position: relative;
+  z-index: 1;
 
   h1 {
     font-size: 48px;

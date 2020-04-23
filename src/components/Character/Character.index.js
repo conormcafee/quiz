@@ -22,8 +22,9 @@ const TV = ({ id, character }) => {
   const { position, scale, rotate, image } = character;
 
   return (
-    <Wrapper isOdd={isOdd(id)}>
+    <Wrapper>
       <TVBG
+        isOdd={isOdd(id)}
         style={{
           backgroundImage: `url(${TVImage})`,
         }}
