@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 
-src/data/*
+src/data.js
+src/picture/*
